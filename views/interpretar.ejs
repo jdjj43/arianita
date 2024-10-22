@@ -1,0 +1,84 @@
+<%- include('partials/header') %>
+    <style>
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+
+      th,
+      td {
+        border: 1px solid black;
+        padding: 8px;
+        text-align: left;
+      }
+
+      th {
+        background-color: #2A3E6D;
+        color: #fff;
+      }
+
+      td {
+        background-color: #fafafa;
+      }
+    </style>
+  <body>
+    <h2>Tabla de Evaluación</h2>
+    <div class="directorio_card paciente-card">
+      <p><%= puntuaciones.id %></p>
+      <p><%= puntuaciones.nombre_completo %></p>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Puntuación (Rango)</th>
+          <th>Problemas de Validez del Protocolo</th>
+          <th>Posibles Causas de Esta Puntuación</th>
+          <th>Consecuencias Interpretativas</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% Object.entries(datos).slice(0,8).forEach(([key, value]) => { %>
+          <tr>
+            <td><%= nombres[key] %></td>
+            <td><%= puntuaciones[key] %> <%= `${value[0] !== '' ? `(${value[0]})` : ''}` %></td>
+            <td><%= value[1] %></td>
+            <td><%= value[2] %></td>
+            <td><%= value[3] %></td>
+          </tr>
+        <% }); %>
+      </tbody>
+    </table>
+    <br>
+    <br>
+
+    <table>
+      <thead>
+        <tr>
+          <th rowspan="2">Nombre</th>
+          <th rowspan="2">Puntuación</th>
+          <th colspan="2">Síntomas clínicos, tendencias comportamentales y características de la personalidad</th>
+          <th rowspan="2">Consideraciones diagnósticas</th>
+          <th rowspan="2">Consideraciones terapéuticas</th>
+        </tr>
+        <tr>
+          <th>Respuestas a la prueba</th>
+          <th>Correlatos empíricos</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% Object.entries(datos).slice(8).forEach(([key, value]) => { %>
+          <tr>            
+            <td><%= nombres[key] %></td>
+            <td><%= puntuaciones[key] %> <%= `${value[0] !== '' ? `(${value[0]})` : ''}` %></td>
+            <td><%= value[1] %></td>
+            <td><%= value[2] %></td>
+            <td><%= value[3] %></td>
+            <td><%= value[4] %></td>
+          </tr>
+        <% }); %>
+      </tbody>
+    </table>    
+  </body>
+
+<%- include('partials/footer') %>

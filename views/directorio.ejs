@@ -1,0 +1,28 @@
+<%- include('partials/header') %>
+<div class="directorio-main">
+  <div class="directorio-bg">
+    <div class="busqueda">
+      <form>
+        <input
+          type="text"
+          name="busqueda"
+          id="busqueda"
+          class="directorio-filtrado"
+          placeholder="Filtrar por nombre"
+        />
+        <input
+          type="text"
+          name="busqueda_por_id"
+          id="busqueda_por_id"
+          class="directorio-filtrado"
+          placeholder="Filtrar por ID"
+        />
+      </form>
+    </div>
+    <div class="directorio-container" id="directorio_container"></div>
+  </div>
+</div>
+<script>
+  let pacientes = <%- JSON.stringify(data) %>;
+</script>
+<%- include('partials/footer') %>

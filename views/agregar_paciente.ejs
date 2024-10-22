@@ -1,0 +1,238 @@
+<%- include('partials/header') -%>
+<div class="agregar-pacientes-container">
+  <form action="/agregar_paciente" method="post" class="agregar-paciente-form">
+    <legend>Agregar paciente</legend>
+
+    <div class="input-container nombre-completo">
+      <label for="nombre_completo">Nombre Completo:</label>
+      <input type="text" id="nombre_completo" name="nombre_completo" required />
+    </div>
+
+    <div class="agregar-paciente-inputs">
+
+      <div class="agregar-paciente-columna">
+        <div class="input-container">
+          <label for="interrogacion">?:</label>
+          <input type="number" id="interrogacion" name="interrogacion" min="1" max="150" required />
+        </div>
+        <div class="input-container">
+          <label for="VRIN_r">VRIN-r:</label>
+          <input type="number" id="VRIN_r" name="VRIN_r" min="1" max="150" required />
+        </div>
+        <div class="input-container">
+          <label for="TRIN_r">TRIN-r:</label>
+          <input type="number" id="TRIN_r" name="TRIN_r" min="1" max="150" required />
+        </div>
+        <div class="input-container">
+          <label for="F_r">F-r:</label>
+          <input type="number" id="F_r" name="F_r" min="1" max="150" required />
+        </div>
+        <div class="input-container">
+          <label for="Fp_r">Fp-r:</label>
+          <input type="number" id="Fp_r" name="Fp_r" min="1" max="150" required />
+        </div>
+        <div class="input-container">
+          <label for="Fs">Fs:</label>
+          <input type="number" id="Fs" name="Fs" min="1" max="150" required />
+        </div>
+        <div class="input-container">
+          <label for="FBS_r">FBS-r:</label>
+          <input type="number" id="FBS_r" name="FBS_r" min="1" max="150" required />
+        </div>
+        <div class="input-container">
+          <label for="L_r">L-r:</label>
+          <input type="number" id="L_r" name="L_r" min="1" max="150" required />
+        </div>
+        <div class="input-container">
+          <label for="K_r">K-r:</label>
+          <input type="number" id="K_r" name="K_r" min="1" max="150" required />
+        </div>
+        <div class="input-container">
+          <label for="EID">EID:</label>
+          <input type="number" id="EID" name="EID" min="1" max="150" required />
+        </div>
+        <div class="input-container">
+          <label for="THD">THD:</label>
+          <input type="number" id="THD" name="THD" min="1" max="150" required />
+        </div>
+        <div class="input-container">
+          <label for="BXD">BXD:</label>
+          <input type="number" id="BXD" name="BXD" min="1" max="150" required />
+        </div>
+        <div class="input-container">
+          <label for="RCd">RCd:</label>
+          <input type="number" id="RCd" name="RCd" min="1" max="150" required />
+        </div>
+      </div>
+
+      <div class="agregar-paciente-columna">
+        <div class="input-container">
+          <label for="RC1">RC1:</label>
+          <input type="number" id="RC1" name="RC1" min="1" max="150" required />
+        </div>
+        <div class="input-container">
+          <label for="RC2">RC2:</label>
+          <input type="number" id="RC2" name="RC2" min="1" max="150" required />
+        </div>
+        <div class="input-container">
+          <label for="RC3">RC3:</label>
+          <input type="number" id="RC3" name="RC3" min="1" max="150" required />
+        </div>
+        <div class="input-container">
+          <label for="RC4">RC4:</label>
+          <input type="number" id="RC4" name="RC4" min="1" max="150" required />
+        </div>
+        <div class="input-container">
+          <label for="RC6">RC6:</label>
+          <input type="number" id="RC6" name="RC6" min="1" max="150" required />
+        </div>
+        <div class="input-container">
+          <label for="RC7">RC7:</label>
+          <input type="number" id="RC7" name="RC7" min="1" max="150" required />
+        </div>
+        <div class="input-container">
+          <label for="RC8">RC8:</label>
+          <input type="number" id="RC8" name="RC8" min="1" max="150" required />
+        </div>
+        <div class="input-container">
+          <label for="RC9">RC9:</label>
+          <input type="number" id="RC9" name="RC9" min="1" max="150" required />
+        </div>
+        <div class="input-container">
+          <label for="MLS">MLS:</label>
+          <input type="number" id="MLS" name="MLS" min="1" max="150" required />
+        </div>
+        <div class="input-container">
+          <label for="GIC">GIC:</label>
+          <input type="number" id="GIC" name="GIC" min="1" max="150" required />
+        </div>
+        <div class="input-container">
+          <label for="HPC">HPC:</label>
+          <input type="number" id="HPC" name="HPC" min="1" max="150" required />
+        </div>
+        <div class="input-container">
+          <label for="NUC">NUC:</label>
+          <input type="number" id="NUC" name="NUC" min="1" max="150" required />
+        </div>
+        <div class="input-container">
+          <label for="COG">COG:</label>
+          <input type="number" id="COG" name="COG" min="1" max="150" required />
+        </div>
+      </div>
+
+      <div class="agregar-paciente-columna">
+        <div class="input-container">
+          <label for="SUI">SUI:</label>
+          <input type="number" id="SUI" name="SUI" min="1" max="150" required />
+        </div>
+        <div class="input-container">
+          <label for="HLP">HLP:</label>
+          <input type="number" id="HLP" name="HLP" min="1" max="150" required />
+        </div>
+        <div class="input-container">
+          <label for="SFD">SFD:</label>
+          <input type="number" id="SFD" name="SFD" min="1" max="150" required />
+        </div>
+        <div class="input-container">
+          <label for="NFC">NFC:</label>
+          <input type="number" id="NFC" name="NFC" min="1" max="150" required />
+        </div>
+        <div class="input-container">
+          <label for="STW">STW:</label>
+          <input type="number" id="STW" name="STW" min="1" max="150" required />
+        </div>
+        <div class="input-container">
+          <label for="AXY">AXY:</label>
+          <input type="number" id="AXY" name="AXY" min="1" max="150" required />
+        </div>
+        <div class="input-container">
+          <label for="ANP">ANP:</label>
+          <input type="number" id="ANP" name="ANP" min="1" max="150" required />
+        </div>
+        <div class="input-container">
+          <label for="BRF">BRF:</label>
+          <input type="number" id="BRF" name="BRF" min="1" max="150" required />
+        </div>
+        <div class="input-container">
+          <label for="MSF">MSF:</label>
+          <input type="number" id="MSF" name="MSF" min="1" max="150" required />
+        </div>
+        <div class="input-container">
+          <label for="JCP">JCP:</label>
+          <input type="number" id="JCP" name="JCP" min="1" max="150" required />
+        </div>
+        <div class="input-container">
+          <label for="SUB">SUB:</label>
+          <input type="number" id="SUB" name="SUB" min="1" max="150" required />
+        </div>
+        <div class="input-container">
+          <label for="AGG">AGG:</label>
+          <input type="number" id="AGG" name="AGG" min="1" max="150" required />
+        </div>
+        <div class="input-container">
+          <label for="ACT">ACT:</label>
+          <input type="number" id="ACT" name="ACT" min="1" max="150" required />
+        </div>
+      </div>
+
+      <div class="agregar-paciente-columna">
+        <div class="input-container">
+          <label for="FML">FML:</label>
+          <input type="number" id="FML" name="FML" min="1" max="150" required />
+        </div>
+        <div class="input-container">
+          <label for="IPP">IPP:</label>
+          <input type="number" id="IPP" name="IPP" min="1" max="150" required />
+        </div>
+        <div class="input-container">
+          <label for="SAV">SAV:</label>
+          <input type="number" id="SAV" name="SAV" min="1" max="150" required />
+        </div>
+        <div class="input-container">
+          <label for="SHY">SHY:</label>
+          <input type="number" id="SHY" name="SHY" min="1" max="150" required />
+        </div>
+        <div class="input-container">
+          <label for="DSF">DSF:</label>
+          <input type="number" id="DSF" name="DSF" min="1" max="150" required />
+        </div>
+        <div class="input-container">
+          <label for="AES">AES:</label>
+          <input type="number" id="AES" name="AES" min="1" max="150" required />
+        </div>
+        <div class="input-container">
+          <label for="MEC">MEC:</label>
+          <input type="number" id="MEC" name="MEC" min="1" max="150" required />
+        </div>
+        <div class="input-container">
+          <label for="AGGR_r">AGGR_r:</label>
+          <input type="number" id="AGGR_r" name="AGGR_r" min="1" max="150" required />
+        </div>
+        <div class="input-container">
+          <label for="PSYC_r">PSYC_r:</label>
+          <input type="number" id="PSYC_r" name="PSYC_r" min="1" max="150" required />
+        </div>
+        <div class="input-container">
+          <label for="DISC_r">DISC_r:</label>
+          <input type="number" id="DISC_r" name="DISC_r" min="1" max="150" required />
+        </div>
+        <div class="input-container">
+          <label for="NEGE_r">NEGE_r:</label>
+          <input type="number" id="NEGE_r" name="NEGE_r" min="1" max="150" required />
+        </div>
+        <div class="input-container">
+          <label for="INTR_r">INTR_r:</label>
+          <input type="number" id="INTR_r" name="INTR_r" min="1" max="150" required />
+        </div>
+      </div>
+
+    </div>
+
+    <div class="botones-container">
+      <a href="/" class="cancel-btn">Cancelar</a>
+      <button type="submit" class="submit-btn">Guardar paciente</button>
+    </div>
+  </form>
+</div>
+
+<%- include('partials/footer') -%>
