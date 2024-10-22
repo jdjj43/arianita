@@ -13,14 +13,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', mainRouter);
 
-const browserSync = require('browser-sync').create();
-
 app.listen(3000, () => {
   console.log('Server is running on port 3000');
-  browserSync.init({
-    proxy: 'http://localhost:3000',
-    files: ['public/**/*.*', 'views/**/*.*'],
-    port: 3001,
-    open: false
-  });
 });
